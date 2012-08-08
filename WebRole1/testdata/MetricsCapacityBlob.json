@@ -1,0 +1,140 @@
+[{
+	"Capacity": 0,
+	"ContainerCount": 0,
+	"ObjectCount": 0,
+	"PartitionKey": "20120724T0000",
+	"RowKey": "analytics"
+},
+{
+	"Capacity": 680289612,
+	"ContainerCount": 6,
+	"ObjectCount": 21,
+	"PartitionKey": "20120724T0000",
+	"RowKey": "data"
+},
+{
+	"Capacity": 58,
+	"ContainerCount": 1,
+	"ObjectCount": 0,
+	"PartitionKey": "20120725T0000",
+	"RowKey": "analytics"
+},
+{
+	"Capacity": 680289612,
+	"ContainerCount": 6,
+	"ObjectCount": 21,
+	"PartitionKey": "20120725T0000",
+	"RowKey": "data"
+},
+{
+	"Capacity": 58,
+	"ContainerCount": 1,
+	"ObjectCount": 0,
+	"PartitionKey": "20120726T0000",
+	"RowKey": "analytics"
+},
+{
+	"Capacity": 680289612,
+	"ContainerCount": 6,
+	"ObjectCount": 21,
+	"PartitionKey": "20120726T0000",
+	"RowKey": "data"
+},
+{
+	"Capacity": 58,
+	"ContainerCount": 1,
+	"ObjectCount": 0,
+	"PartitionKey": "20120727T0000",
+	"RowKey": "analytics"
+},
+{
+	"Capacity": 680289612,
+	"ContainerCount": 6,
+	"ObjectCount": 21,
+	"PartitionKey": "20120727T0000",
+	"RowKey": "data"
+},
+{
+	"Capacity": 58,
+	"ContainerCount": 1,
+	"ObjectCount": 0,
+	"PartitionKey": "20120728T0000",
+	"RowKey": "analytics"
+},
+{
+	"Capacity": 680289612,
+	"ContainerCount": 6,
+	"ObjectCount": 21,
+	"PartitionKey": "20120728T0000",
+	"RowKey": "data"
+},
+{
+	"Capacity": 58,
+	"ContainerCount": 1,
+	"ObjectCount": 0,
+	"PartitionKey": "20120729T0000",
+	"RowKey": "analytics"
+},
+{
+	"Capacity": 680289612,
+	"ContainerCount": 6,
+	"ObjectCount": 21,
+	"PartitionKey": "20120729T0000",
+	"RowKey": "data"
+},
+{
+	"Capacity": 58,
+	"ContainerCount": 1,
+	"ObjectCount": 0,
+	"PartitionKey": "20120730T0000",
+	"RowKey": "analytics"
+},
+{
+	"Capacity": 680289612,
+	"ContainerCount": 6,
+	"ObjectCount": 21,
+	"PartitionKey": "20120730T0000",
+	"RowKey": "data"
+},
+{
+	"Capacity": 58,
+	"ContainerCount": 1,
+	"ObjectCount": 0,
+	"PartitionKey": "20120731T0000",
+	"RowKey": "analytics"
+},
+{
+	"Capacity": 680289612,
+	"ContainerCount": 6,
+	"ObjectCount": 21,
+	"PartitionKey": "20120731T0000",
+	"RowKey": "data"
+},
+{
+	"Capacity": 58,
+	"ContainerCount": 1,
+	"ObjectCount": 0,
+	"PartitionKey": "20120801T0000",
+	"RowKey": "analytics"
+},
+{
+	"Capacity": 680289612,
+	"ContainerCount": 6,
+	"ObjectCount": 21,
+	"PartitionKey": "20120801T0000",
+	"RowKey": "data"
+},
+{
+	"Capacity": 58,
+	"ContainerCount": 1,
+	"ObjectCount": 0,
+	"PartitionKey": "20120802T0000",
+	"RowKey": "analytics"
+},
+{
+	"Capacity": 680289612,
+	"ContainerCount": 6,
+	"ObjectCount": 21,
+	"PartitionKey": "20120802T0000",
+	"RowKey": "data"
+}]
