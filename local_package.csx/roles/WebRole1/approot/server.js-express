@@ -1,0 +1,13 @@
+var express = require('express');
+// var html = require('html');
+var server = module.exports = express.createServer();
+
+// console.log( 'Root __dirname: ' + __dirname );
+require('./config/environment.js')(server, express);
+require('./config/routes.js')(server);
+
+server.listen(process.env.PORT);
+
+console.log("Server listening on port " + process.env.PORT );
+console.log("View engine: " + server.get("view engine") );
+console.log("Views: " + server.get("views") );

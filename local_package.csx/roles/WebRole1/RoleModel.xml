@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RoleModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WebRole1" version="1.7.30602.1703" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <Startup>
+    <Task commandLine="setup_web.cmd &gt; log.txt" executionContext="elevated" relativePath="approot\bin">
+      <Environment>
+        <Variable name="EMULATED">
+          <RoleInstanceValue xpath="/RoleEnvironment/Deployment/@emulated" />
+        </Variable>
+      </Environment>
+    </Task>
+  </Startup>
+  <Runtime />
+  <Properties>
+    <Property name="TargetFrameworkVersion" value="v3.5" />
+    <Property name="TargetRuntimeVersion" value="v2.0.50727" />
+  </Properties>
+  <Sites>
+    <Site name="Web" physicalDirectory="C:\node\uic\WebRole1">
+      <Bindings>
+        <Binding name="Endpoint1" endpointName="Endpoint1" />
+      </Bindings>
+    </Site>
+  </Sites>
+</RoleModel>

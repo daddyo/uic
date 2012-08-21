@@ -1,0 +1,29 @@
+<!doctype html>
+<meta charset="UTF-8">
+
+<html>
+	<head>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-layout.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-canvas.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-utils.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-gviz.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-interaction-model.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-range-selector.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-tickers.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/strftime/strftime-min.js"></script>
+
+	</head>
+	
+	<body>
+		<div id="graphdiv2"
+		  style="width:500px; height:300px;"></div>
+		<script type="text/javascript">
+		  g2 = new Dygraph(
+			document.getElementById("graphdiv2"),
+			"/testdata/temperatures.csv", // path to CSV file
+			{}          // options
+		  );
+		</script>
+	</body>
+</html>

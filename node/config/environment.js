@@ -12,7 +12,8 @@ module.exports = function(app, express) {
 // JB: put css & images under public then set their location
 //        app.use(express.static(__;dirname + '/public'));
         app.set('views', viewsPath  );
-        app.set('view engine', 'jade');
+        app.set('view engine', 'ejs');
+//        app.set('view options', { layout: false } );
     });
     
     // JB: does this turn env into dev env?

@@ -1,0 +1,25 @@
+extends layout
+
+block scripts
+ script(src="/node_modules/dygraphs/dygraph-layout.js")
+ script(src="/node_modules/dygraphs/dygraph-canvas.js")
+ script(src="/node_modules/dygraphs/dygraph.js")
+ script(src="/node_modules/dygraphs/dygraph-utils.js")
+ script(src="/node_modules/dygraphs/dygraph-gviz.js")
+ script(src="/node_modules/dygraphs/dygraph-interaction-model.js")
+ script(src="/node_modules/dygraphs/dygraph-range-selector.js")
+ script(src="/node_modules/dygraphs/dygraph-tickers.js")
+ script(src="/node_modules/dygraphs/strftime/strftime-min.js")
+ script
+  g = new Dygraph(
+    // containing div
+    document.getElementById("graphdiv"),
+    // CSV or path to a CSV file.
+    "Date,Temperature\n" +
+    "2008-05-07,75\n" +
+    "2008-05-08,70\n" +
+    "2008-05-09,80\n"
+  );
+
+block replace content
+ div#graphdiv

@@ -1,0 +1,103 @@
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>cd /d "C:\node\uic\local_package.csx\roles\WebRole1\approot\bin\" 
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>if "true" == "true" if DEFINED APPCMD goto emulator_setup 
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>echo Running in emulator adding iisnode to application host config 
+Running in emulator adding iisnode to application host config
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>FOR /F "tokens=1,2 delims=/" %a in (""C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config" ") DO set FN=%a  & set OPN=%b 
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>set FN="C:\Program Files\IIS Express\appcmd.exe"   & set OPN=apphostconfig:"C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config"  
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>if "apphostconfig:"C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config" " == ""C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config" " (
+echo "Could not parse appcmd '"C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config"  for configuration file, exiting"  
+ goto error 
+) 
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>set IISNODE_BINARY_DIRECTORY=C:\Program Files\Microsoft SDKs\Windows Azure\PowerShell\Azure\x86 
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>if "AMD64" == "AMD64" set IISNODE_BINARY_DIRECTORY=C:\Program Files (x86)\Microsoft SDKs\Windows Azure\PowerShell\Azure\x64 
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>echo "Using iisnode binaries location 'C:\Program Files (x86)\Microsoft SDKs\Windows Azure\PowerShell\Azure\x64'" 
+"Using iisnode binaries location 'C:\Program Files (x86)\Microsoft SDKs\Windows Azure\PowerShell\Azure\x64'"
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>echo installing iisnode module using AppCMD alias "C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config"  
+installing iisnode module using AppCMD alias "C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config" 
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>"C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config"  install module /name:"iisnode" /image:"C:\Program Files (x86)\Microsoft SDKs\Windows Azure\PowerShell\Azure\x64\iisnode.dll" 
+GLOBAL MODULE object "iisnode" added
+MODULE object "iisnode" added
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>set apphostconfigfile="C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config"  
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>powershell -c "set-executionpolicy unrestricted" 
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>powershell .\ChangeConfig.ps1 "C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config"  
+Adding iisnode section to config file 'C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config'
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>if 0 NEQ 0 goto error 
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>if "AMD64" == "AMD64" set  
+ALLUSERSPROFILE=C:\ProgramData
+APPCMD="C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config" 
+APPDATA=C:\Users\JB2\AppData\Roaming
+apphostconfigfile="C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config" 
+AZURE_DRIVE_DEV_PATH=C:\Users\JB2\AppData\Local\dftmp\wadd
+CommonProgramFiles=C:\Program Files\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+COMPUTERNAME=VS11BETA
+ComSpec=C:\Windows\system32\cmd.exe
+DiagnosticStore=C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\directory\DiagnosticStore\
+EMULATED=true
+FN="C:\Program Files\IIS Express\appcmd.exe" 
+FP_NO_HOST_CHECK=NO
+HOMEDRIVE=C:
+HOMEPATH=\Users\JB2
+IISNODE_BINARY_DIRECTORY=C:\Program Files (x86)\Microsoft SDKs\Windows Azure\PowerShell\Azure\x64
+LOCALAPPDATA=C:\Users\JB2\AppData\Local
+LOGONSERVER=\\VS11BETA
+MONITORING_SESSION_NAME=devFabric.mainSession
+NUMBER_OF_PROCESSORS=4
+OPN=apphostconfig:"C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp\applicationHost.config" 
+OS=Windows_NT
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 15 Stepping 11, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=0f0b
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+PROMPT=$P$G
+PSModulePath=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files (x86)\Microsoft SDKs\Windows Azure\PowerShell\
+PUBLIC=C:\Users\Public
+RoleDeploymentID=deployment17(11)
+RoleInstanceID=deployment17(11).uic.WebRole1_IN_0
+RoleName=WebRole1
+SystemDrive=C:
+SystemRoot=C:\Windows
+USERDOMAIN=VS11BETA
+USERNAME=JB2
+USERPROFILE=C:\Users\JB2
+VS110COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
+windir=C:\Windows
+_CSRUN_IISEXPRESS_VERSION=8.0
+_DF_STATE_DIRECTORY=C:\Users\JB2\AppData\Local\dftmp\
+__IISCONFIGURATOR_SITE_CLEANUP_PREFIX_=deployment17(
+RdRoleRoot=C:\node\uic\local_package.csx\roles\WebRole1
+RoleRoot=C:\node\uic\local_package.csx\roles\WebRole1
+RdRoleId=deployment17(11).uic.WebRole1_IN_0
+TEMP=C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp
+TMP=C:\Users\JB2\AppData\Local\dftmp\Resources\f9dfa25b-d41e-41a4-9671-af313ada2340\temp\temp\RoleTemp
+PATH=C:\Windows\system32\WindowsPowerShell\v1.0\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\SysInternals;C:\Program Files (x86)\Notepad++;C:\Program Files\7-Zip;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Users\JB2\AppData\Roaming\npm;C:\Program Files (x86)\nodejs\;C:\Program Files (x86)\Git\cmd;C:\Users\Public\Documents\WindowsPowerShell;C:\Users\JB2\Documents\WindowsPowerShell;C:\Program Files\Microsoft SDKs\Windows Azure\Emulator\devfabric\;C:\Program Files\Microsoft SDKs\Windows Azure\Emulator\devfabric\x86\;C:\Program Files\Microsoft SDKs\Windows Azure\Emulator\devfabric\x64\;C:\node\uic\local_package.csx\roles\WebRole1\base\x64;C:\node\uic\local_package.csx\roles\WebRole1\base\x86;C:\node\uic\local_package.csx\roles\WebRole1\diagnostics\x64;
+__WaRuntimeAgent__=WA-Runtime-af29d28d48e4890c4fa1d32d1f97f993
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>copy /y "C:\Program Files (x86)\Microsoft SDKs\Windows Azure\PowerShell\Azure\x64\iisnode_schema.xml" "C:\Program Files\IIS Express\config\schema\iisnode_schema.xml" 
+        1 file(s) copied.
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>if 0 NEQ 0 goto error 
+
+C:\node\uic\local_package.csx\roles\WebRole1\approot\bin>exit /b 0 

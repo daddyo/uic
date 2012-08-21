@@ -1,0 +1,60 @@
+<!doctype html>
+<meta charset="UTF-8">
+
+<html>
+	<head>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-layout.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-canvas.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-utils.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-gviz.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-interaction-model.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-range-selector.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/dygraph-tickers.js"></script>
+		<script type="text/javascript" src="/node_modules/dygraphs/strftime/strftime-min.js"></script>
+
+        <script type="text/javascript">
+            function body_onload() {
+                g2 = new Dygraph(
+
+                    // containing div
+                    document.getElementById("graphdiv"),
+
+                    // CSV or path to a CSV file.
+                    "Date,Temperature\n" +
+                    "2008-05-07,75\n" +
+                    "2008-05-08,70\n" +
+                    "2008-05-09,80\n"
+
+                );
+               
+            }
+	</head>
+
+	<body onload="body_onload()">
+
+        <div id="outerdiv" style="border-style: dashed; border-color: grey; border-width: 1px">
+            &nbsp;
+            <!-- Just before graphdiv -->
+            <div id="graphdiv"></div>
+            <!-- Just after graphdiv -->
+        </div>
+        
+		<script type="text/javascript">
+
+			g = new Dygraph(
+
+				// containing div
+				document.getElementById("graphdiv"),
+
+				// CSV or path to a CSV file.
+				"Date,Temperature\n" +
+				"2008-05-07,75\n" +
+				"2008-05-08,70\n" +
+				"2008-05-09,80\n"
+
+			);
+		</script>
+        
+	</body>
+</html>
